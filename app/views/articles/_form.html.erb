@@ -18,7 +18,7 @@
   <div class="">
     <label>Category</label>
     <div class="">
-      <%= select_tag(:category_id, options_for_select(@categories), :prompt => “Select one!”) %>
+      <<%= select_tag("category_ids[]", options_for_select(Category.all.collect { |cat| [cat.name, cat.id] }, @article.categories.collect { |cat| cat.id}), {:multiple=>true, :size=>6})%>
     </div>
   </div>
 

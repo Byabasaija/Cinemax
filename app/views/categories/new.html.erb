@@ -1,0 +1,16 @@
+<%= form_with(model: @category, local: true, class: 'form') do |form| %>
+  <div class="">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class=" ">
+    <%= form.label :priority %>
+    <%= form.number_field :priority %>
+  </div>
+
+  
+  <div class="">
+    <%= form.submit %>
+  </div>
+<% end %>
