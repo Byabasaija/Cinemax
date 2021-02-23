@@ -1,7 +1,7 @@
 class CategoriesController < ApplicationController
     def index
-        @categories = Category.all  
-        p '##########################' 
+        @categories = Category.all.order('priority')  
+        
     end
     def new
         @category = Category.new
@@ -15,6 +15,13 @@ class CategoriesController < ApplicationController
             flash[:notice] = "Error while creating category"
         end 
     end
+
+     def show
+         category = Category.find(params[:id])
+         @articles = category.articles
+     end
+  
+      
     private
     def category_params 
         params.require(:category).permit(:name, :priority)

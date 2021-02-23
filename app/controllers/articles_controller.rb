@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   def index
-    @articles = Article.all
+    @articles = Article.all.order('created_at DESC')
+    @categories = Category.all.order('priority')
   end
   def new
     @article = Article.new 
@@ -21,6 +22,19 @@ class ArticlesController < ApplicationController
        
     
    end 
+  end
+
+  def vote
+    @vote = current_user.votes.new(article_id: params[:article_id])
+    if @vote.save
+    
+    flash[:notice] = 'Voted'
+    
+    else
+      flash[:alert] = 'Not Voted'
+      redirect_to(articles_path)
+    end
+    
   end
   private
   def article_params

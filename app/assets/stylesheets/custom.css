@@ -1,1 +1,25 @@
 @import 'bootstrap/dist/css/bootstrap';
+
+.article-title {
+    padding-top: 300px;
+    padding-left: 20px;
+    color: rgb(255, 146, 68);
+}
+
+.article-text{
+    color: cornsilk;
+    padding-left: 20px;
+}
+
+.category{
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 100px;
+    color: cornsilk  !important
+}
+
+.cat-name{
+    padding-left: 20px;
+    color: cornsilk;
+    
+}
