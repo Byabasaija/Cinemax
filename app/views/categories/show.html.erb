@@ -1,11 +1,13 @@
 <div class="row">
     <% @articles.each do |article| %>
-      <div class="col-6">
+      <div class="col-6 bg-light">
          
           <div class='d-flex'>
-           <div><% if article.image.attached? %>
+           <div class="">
+             <% if article.image.attached? %>
             <%= image_tag article.image, class: 'img-fluid'%>
-            <% end %></div>
+            <% end %>
+            </div>
             <div><h5 class=""><%= article.title %></h5>
              <p class=""><%= article.text %></p>
               <h6 class=" text-muted">Author: <%= article.user.name %></h6>

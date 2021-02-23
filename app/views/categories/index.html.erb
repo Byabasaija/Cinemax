@@ -1,6 +1,6 @@
 
 
-<div class="container-fuid">
+<div class="container mw-100">
    <div class="row">
     <% most_voted_article = Vote.most_voted%>
     <% most_voted_article.each do |vote| %>
@@ -21,7 +21,7 @@
           
             <%category.articles.most_recent.each do |article| %>
              <div style = 'background: url(<%= url_for(article.image)%>); width:100%; height:100%; background-size:cover'>
-             <h5 class="category"><%= link_to category.name, category_path(category)%></h5>
+             <h5 class="category"><%= link_to category.name, category_path(category), class: "a-primary"%></h5>
               <h6 class="cat-name"><%= article.title%></h6>
              </div>
             <% end %>
