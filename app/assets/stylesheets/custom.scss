@@ -4,6 +4,7 @@
     padding-top: 300px;
     padding-left: 20px;
     color: rgb(255, 146, 68);
+    font-weight: bold;
 }
 
 .article-text{
@@ -30,4 +31,12 @@
 .a-primary{
     color: white;
     font-weight: bold;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    flex-grow: inherit;
+
 }

@@ -1,8 +1,8 @@
 <div class="row">
     <% @articles.each do |article| %>
-      <div class="col-6 bg-light">
+      <div class="col-4 bg-light">
          
-          <div class='d-flex'>
+          <div class='flex'>
            <div><% if article.image.attached? %>
             <%= image_tag article.image, class: 'img-fluid'%>
             <% end %></div>
