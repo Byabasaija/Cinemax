@@ -1,16 +1,15 @@
 <div class="row">
     <% @articles.each do |article| %>
       <div class="col-4 bg-light">
-         
-          <div class='flex'>
-           <div><% if article.image.attached? %>
+          <div class='d-flex'>
+           <div class="">
             <%= image_tag article.image, class: 'img-fluid'%>
-            <% end %></div>
-            <div><h5 class=""><%= article.title %></h5>
+            </div>
+            <div><h5 class="title"><%= article.title %></h5>
              <p class=""><%= article.text %></p>
               <h6 class=" text-muted">Author: <%= article.user.name %></h6>
               <%= upvote_or_downvote(article) %>
-                    <%= article.votes.count %>
+               <%= article.votes.count %>
                          <%= 'vote'.pluralize(article.votes.count) %>
               </div>
               

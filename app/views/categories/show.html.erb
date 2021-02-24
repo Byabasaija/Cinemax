@@ -4,11 +4,10 @@
          
           <div class='d-flex'>
            <div class="">
-             <% if article.image.attached? %>
+            
             <%= image_tag article.image, class: 'img-fluid'%>
-            <% end %>
             </div>
-            <div><h5 class=""><%= article.title %></h5>
+            <div><h5 class="title"><%= article.title %></h5>
              <p class=""><%= article.text %></p>
               <h6 class=" text-muted">Author: <%= article.user.name %></h6>
               <%= upvote_or_downvote(article) %>
