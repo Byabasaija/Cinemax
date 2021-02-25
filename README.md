@@ -8,7 +8,7 @@ Cinemax is a web apllication i built using ruby on rails where the Authenticated
 - The articles page shows all the articles
 
 ## Project screenshot
-![screenshot](app/assets/images/shot.png)
+![screenshot](app/assets/images/shot1.png)
 
 ## 🔨 Built in
 
