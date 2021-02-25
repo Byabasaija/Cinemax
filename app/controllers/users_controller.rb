@@ -1,31 +1,28 @@
 class UsersController < ApplicationController
-    # before_action :set_user, only: %i[show edit update destroy]
-    def index
-      
-    end
-    
+  # before_action :set_user, only: %i[show edit update destroy]
+  def index; end
+
   def new
     if session[:current_user_id]
       flash[:notice] = 'You are logged in.'
-      return redirect_to users_path
+      redirect_to users_path
     else
-     @user = User.new
+      @user = User.new
     end
   end
 
- 
   def create
     @user = User.find_or_create_by(user_params)
-      session[:current_user_id] = @user.id
-      flash[:notice] = 'You are logged in successfully.' 
-       redirect_to root_path
+    session[:current_user_id] = @user.id
+    flash[:notice] = 'You are logged in successfully.'
+    redirect_to root_path
   end
 
   # DELETE /users/1 or /users/1.json
   def destroy
     session[:current_user_id] = nil
     flash[:notice] = 'You are successfully logged out.'
-     redirect_to new_user_path 
+    redirect_to new_user_path
   end
 
   private

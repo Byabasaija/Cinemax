@@ -1,10 +1,9 @@
 class VotesController < ApplicationController
   # before_action :set_post
 
-
   def create
-    @vote= current_user.votes.new(article_id: params[:article_id])
-    
+    @vote = current_user.votes.new(article_id: params[:article_id])
+
     if @vote.save
       redirect_to articles_path, notice: 'Upvoted'
     else
@@ -22,7 +21,5 @@ class VotesController < ApplicationController
     end
   end
 
-  def vote_count
-    
-  end
+  def vote_count; end
 end

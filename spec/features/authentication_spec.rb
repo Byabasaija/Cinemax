@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe 'authenticatate', type: :feature do
-  
   scenario 'sign in successfully' do
     visit new_user_path
     fill_in 'Name', with: 'testname', visible: false

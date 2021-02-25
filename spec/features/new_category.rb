@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe 'Creating an category', type: :feature do
-  
   before :each do
     User.create(name: 'testname')
   end
