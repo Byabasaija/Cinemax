@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  helper_method :user_signed_in?, :current_user
   def authenticate_user!
     if user_signed_in?
       true
@@ -13,5 +14,7 @@ class ApplicationController < ActionController::Base
 
   def current_user
     User.find(session[:current_user_id])
+  rescue StandardError
+    session[:current_user_id] = nil
   end
 end

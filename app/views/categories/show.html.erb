@@ -9,7 +9,7 @@
             </div>
             <div><h5 class="title"><%= article.title %></h5>
              <p class=""><%= article.text %></p>
-              <h6 class=" text-muted">Author: <%= article.user.name %></h6>
+              <h6 class=" text-muted">Author: <%= article.author.name %></h6>
               <%= upvote_or_downvote(article) %>
                     <%= article.votes.count %>
                          <%= 'vote'.pluralize(article.votes.count) %>
