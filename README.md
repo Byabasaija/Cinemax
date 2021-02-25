@@ -27,35 +27,51 @@ Cinemax is a web apllication i built using ruby on rails where the Authenticated
 
  [Presentation]()
 
-## To run the project in local
+## To run the project in locally
 
-- clone the repository from here [repo link](https://github.com/Byabasaija/Cinemax.git)
-- Open terminal and navigate to root folder (/lifestyle-app).
-- Once in root folder
-  - type: `rails s` in terminal and in browser
-  - run `bundle install`
-  - run `yarn install`
-  - run`rails db:create`
-  - run `rails db:migrate`
-  - type localhost:3000/ in address bar.
+Fork or clone the repository from here
+```
+ git clone https://github.com/Byabasaija/Cinemax.git
+```
+ Open terminal and navigate to root directory.
+
+Run these commands;
+```
+bundle install
+```
+
+```
+rails db:create
+```
+```
+rails db:migrate
+```
+
+```
+rails s
+```
+Then visit [localhost:3000](http://locahost:3000)
+
 
 ## How to run the test suite
 
-I added validations tests for all models.
+I added validations tests and association tests for all models.
 1 added also integration tests for authentication and category creation
 Run these tests with those commands:
 
 ### unit tests
-- `rspec spec/user_spec.rb`
-- `rspec spec/category_spec.rb`
-- `rspec spec/article_spec.rb`
-- `rspec spec/vote_spec.rb`
-
+```
+ rspec spec/user_spec.rb`
+ rspec spec/category_spec.rb`
+ rspec spec/article_spec.rb`
+ rspec spec/vote_spec.rb`
+```
 
 ### integration tests
-- `rspec spec/features/authenticate_user_spec.rb`
-- `rspec spec/features/create_category_spec.rb`
-
+```
+rspec spec/features/authentication_spec.rb
+rspec spec/features/new_category_spec.rb`
+```
 
 ## 👨🏽‍ Creator
 
@@ -79,4 +95,3 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is no licensed.

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Sign user', type: :feature do
+RSpec.describe 'authenticatate', type: :feature do
   
   scenario 'sign in successfully' do
     visit new_user_path
