@@ -21,11 +21,11 @@ Cinemax is a web apllication i built using ruby on rails where the Authenticated
 
 ## Live Demo
 
-[See demo ]()
+[See demo ](https://cinemaxxx.herokuapp.com/)
 
 ## Video Link
 
- [Presentation]()
+ [Presentation](https://www.loom.com/share/82f90d9fe9864bea8b4ec29dde0f660f)
 
 ## To run the project in locally
 
