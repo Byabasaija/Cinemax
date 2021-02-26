@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+  before_action :authenticate_user!, only: %i[create new]
   def index
     @categories = Category.all.order('priority')
   end
@@ -13,7 +14,8 @@ class CategoriesController < ApplicationController
       flash[:notice] = 'Your category was created'
       redirect_to root_path
     else
-      flash[:notice] = 'Error while creating category'
+      flash[:notice] = @category.errors.full_messages.first.to_s
+      redirect_to new_category_path
     end
   end
 

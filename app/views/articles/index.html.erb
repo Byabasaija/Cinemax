@@ -1,20 +1,21 @@
-<div class="row vh-100">
+<div class="container">
+<div class="d-flex flex-wrap  p-0 m-0 articles">
     <% @articles.each do |article| %>
-      <div class="col-4 bg-light">
-          <div class='d-flex'>
-           <div class="">
-            <%= image_tag article.image, class: 'img-fluid'%>
-            </div>
-            <div><h5 class="title"><%= article.title %></h5>
-             <p class=""><%= article.text %></p>
-              <h6 class=" text-muted">Author: <%= article.author.name %></h6>
-              <%= upvote_or_downvote(article) %>
-               <%= article.votes.count %>
-                         <%= 'vote'.pluralize(article.votes.count) %>
-              </div>
+      <div class="col-6 article-height bg-light m-0 p-0">
+          
+           <div class="col-6 article-img mb-0 p-0" style="background-image: url(<%= url_for(article.image)%>)"></div>
+            <div class="m-3">
+              <h5 class="title"><%= article.title %></h5>
+              <p class=""><%= article.text%></p>
+                 <h6 class=" text-muted">Author: <%= article.author.name %></h6>
+                 <%= upvote_or_downvote(article) %>
+                <%= article.votes.count%>
+                           <%= 'vote'.pluralize(article.votes.count) %>
+             </div>
               
-          </div>
+          
          
       </div>
     <% end %>
  </div>
+</div>

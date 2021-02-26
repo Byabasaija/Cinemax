@@ -22,7 +22,7 @@
   <div class=" form-group">
     <label>Category</label>
     <div class="">
-      <%= select_tag("category_ids[]", options_for_select(Category.all.collect { |cat| [cat.name, cat.id] }, @article.categories.collect { |cat| cat.id}), {:multiple=>true, :size=>6})%>
+      <%= form.collection_select(:category_ids, Category.all, :id, :name, {}, {:multiple => true, :class => 'form-control js-example-basic-multiple'})%>
     </div>
   </div>
 

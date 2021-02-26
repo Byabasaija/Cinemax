@@ -12,16 +12,15 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
-    @article.categories = Category.find(params[:category_ids])
     @article.author = current_user
     if @article.save
       flash[:notice] = 'Article was successfully created.'
       redirect_to articles_path
 
     else
-      puts @article.errors.full_messages
-      flash[:alert] = 'Error while creating article'
-      @article = Article.new
+
+      flash[:alert] = @article.errors.full_messages.first.to_s
+      redirect_to new_article_path
 
     end
   end
@@ -41,6 +40,6 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :text, :image)
+    params.require(:article).permit(:title, :text, :image, category_ids: [])
   end
 end

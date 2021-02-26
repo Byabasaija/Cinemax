@@ -7,4 +7,12 @@ module ApplicationHelper
       link_to('Upvote!', article_votes_path(article_id: article.id), method: :post)
     end
   end
+
+  def login_logout
+    if user_signed_in?
+      link_to('Logout', current_user, method: :delete, class: 'btn btn-outline-danger')
+    else
+      link_to('Login|Register', new_user_path, class: 'btn btn-outline-primary')
+    end
+  end
 end

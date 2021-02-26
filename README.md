@@ -10,7 +10,7 @@ Cinemax is a web apllication i built using ruby on rails where the Authenticated
 ## Project screenshot
 ![screenshot](app/assets/images/shot1.png)
 
-## 🔨 Built in
+## 🔨 Built with
 
 - Ruby on Rails 6.1.3
 - Ruby 2.7.1
@@ -27,7 +27,7 @@ Cinemax is a web apllication i built using ruby on rails where the Authenticated
 
  [Presentation](https://www.loom.com/share/82f90d9fe9864bea8b4ec29dde0f660f)
 
-## To run the project in locally
+## To run the project  locally
 
 Fork or clone the repository from here
 ```
@@ -83,7 +83,7 @@ rspec spec/features/new_category_spec.rb`
 
 ## Acknowledgement
 
-I have followed the [design](https://www.behance.net/gallery/14554909/liFEsTlye-Mobile-version) given by [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) in Behance
+Design idea by Nelson Sakwa in Behance
 
 ## 🤝 Contributing
 

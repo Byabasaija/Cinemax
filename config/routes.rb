@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   get 'votes/create'
   get 'votes/destroy'
   root 'categories#index'
-  resources :users 
-  resources :categories
+  resources :users, only: [:new, :create, :show, :destroy] 
+  resources :categories, only: [:index, :new, :create, :show]
   resources :articles do
     resources :votes, only: [:create, :destroy]
       

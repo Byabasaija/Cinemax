@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
     if user_signed_in?
       true
     else
+      flash[:notice] = 'You Must login first'
       redirect_to new_user_path
     end
   end
