@@ -26,7 +26,7 @@ Cinemax is a web apllication i built using ruby on rails where the Authenticated
 
 ## Video Link
 
- [Presentation](https://www.loom.com/share/82f90d9fe9864bea8b4ec29dde0f660f)
+ [Presentation](https://www.loom.com/share/f8769ef38e064a68af19b24a1d2030b3)
 
 ## To run the project  locally
 
