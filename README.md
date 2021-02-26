@@ -9,6 +9,7 @@ Cinemax is a web apllication i built using ruby on rails where the Authenticated
 
 ## Project screenshot
 ![screenshot](app/assets/images/shot1.png)
+![screenshot](app/assets/images/shot2.png)
 
 ## 🔨 Built with
 
