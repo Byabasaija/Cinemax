@@ -1,3 +1,10 @@
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
 
 a:hover {
   text-decoration: none;
@@ -74,11 +81,11 @@ a:hover {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 250px;
+  height: 300px;
 }
 
 .article-height {
-  height: 250px;
+  height: 300px;
 }
 
 .articles {
@@ -98,4 +105,9 @@ a:hover {
 
 .home {
   background-color: rgb(77, 45, 23);
+}
+
+.social,
+.policy {
+  color: orange;
 }

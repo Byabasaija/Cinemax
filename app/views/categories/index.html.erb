@@ -1,8 +1,7 @@
 
 <div class="container-fluid home">
  <div class="row featured-article">
-    <% most_voted_article = Vote.most_voted%>
-    <% most_voted_article.each do |vote| %>
+    <% @most_voted_article.each do |vote| %>
       <div style = 'background: url(<%= url_for(vote.article.image)%>); width:100%; height:100%; background-size:cover'>
         <h4 class = "article-title"><%= vote.article.title%></h4>
         <p class = "article-text"><%= vote.article.text.truncate(100)%></p>
