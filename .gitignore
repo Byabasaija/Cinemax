@@ -34,3 +34,27 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+# Ignore application configuration
+/config/application.yml
+
+development:
+ cloud_name: pascalcloud
+ api_key: '888693933347617'
+ api_secret: blCmPiiH2vAtgKwQexQbX-Puc1A
+ enhance_image_tag: 'true'
+ static_file_support: 'false'
+
+production:
+ cloud_name: pascalcloud
+ api_key: '888693933347617'
+ api_secret: blCmPiiH2vAtgKwQexQbX-Puc1A
+ enhance_image_tag: 'true'
+ static_file_support: 'false'
+ 
+test:
+ cloud_name: pascalcloud
+ api_key: '888693933347617'
+ api_secret: blCmPiiH2vAtgKwQexQbX-Puc1A
+ enhance_image_tag: 'true'
+ static_file_support: 'false'

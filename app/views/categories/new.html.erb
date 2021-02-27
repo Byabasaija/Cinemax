@@ -1,0 +1,23 @@
+<div class="container vh-100 w-25">
+  <div class="row">
+    <div class="col">
+    <h3>Create Category</h3>
+        <%= form_with(model: @category, local: true, class: 'form') do |form| %>
+      <div class="form-group">
+        <%= form.label :name %>
+        <%= form.text_field :name, class:"form-control"%>
+      </div>
+
+      <div class=" form-group">
+        <%= form.label :priority %>
+        <%= form.number_field :priority, class: "form-control" %>
+      </div>
+
+      
+      <div class="actions">
+        <%= form.submit class:"btn btn-danger"%>
+      </div>
+    <% end %>
+</div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+
+<div class="container-fluid home">
+ <div class="row featured-article">
+    <% @most_voted_article.each do |vote| %>
+      <div style = 'background: url(<%= url_for(vote.article.image)%>); width:100%; height:100%; background-size:cover'>
+        <h4 class = "article-title"><%= vote.article.title%></h4>
+        <p class = "article-text"><%= vote.article.text.truncate(100)%></p>
+      
+      </div>
+      
+    <% end %>
+
+  </div>
+
+   <div class="row">
+            <% @categories.each do |category|%>
+           <div class=" col-2 mw-100 p-0">
+            <%category.articles.most_recent.each do |article| %>
+             <div style = 'background: url(<%= url_for(article.image)%>); width:100%; height:100%; background-size:cover;'>
+             <h5 class="category"><%= link_to category.name, category_path(category), class: "a-primary"%></h5>
+              <h6 class="cat-name"><%= article.title%></h6>
+             </div>
+            <% end %>
+            </div>   
+            
+         <% end%>
+     </div>
+
+</div>
+
+  
+

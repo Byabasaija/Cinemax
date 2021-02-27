@@ -1,0 +1,11 @@
+
+<%= form_with(model: user) do |form| %>
+ <div class="form-group">
+  <%= form.label :name %> 
+  <%= form.text_field :name, class: "form-control"%> 
+  </div>
+
+  <div class="actions">
+    <%= form.submit  class: "btn btn-primary", value: "Login"%>
+  </div>
+<% end %>
