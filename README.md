@@ -5,7 +5,7 @@ Cinemax is a web apllication i built using ruby on rails where the Authenticated
   - can vote an article
 - The homepage shows a featured article (which has the biggest number of votes), and the list of  all the categories in order of priority
 - The category page show all the articles for a category
-- The articles page shows all the articles
+- The articles page shows all the articles.
 
 ## Project screenshot
 ![screenshot](app/assets/images/shot1.png)
